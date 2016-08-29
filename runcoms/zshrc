@@ -21,4 +21,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Classroom Content Setup
 source ~/.udacityrc
-alias startmu="cd ~/Developer/mudacity && source start.sh && docker start redis && cd .."
+alias startmu="docker-machine start default && cd ~/Developer/mudacity && source start.sh && docker start redis && cd .."
