@@ -19,6 +19,10 @@ eval "$(rbenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
+# Docker Setup
+docker-machine start default
+eval `docker-machine env default`
+
 # Classroom Content Setup
 source ~/.udacityrc
-alias startmu="docker-machine start default && cd ~/Developer/mudacity && source start.sh && docker start redis && cd .."
+alias startmu="pushd ~/Developer/mudacity && source start.sh && docker start redis && popd"
