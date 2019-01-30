@@ -12,17 +12,3 @@ fi
 
 # Customize to your needs...
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-# Docker Setup
-docker-machine start default
-eval `docker-machine env default`
-
-# Classroom Content Setup
-source ~/.udacityrc
-alias startmu="pushd ~/Developer/mudacity && source start.sh && docker start redis && popd"

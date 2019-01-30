@@ -187,6 +187,7 @@
 	rmrf = rm -r -f
 	#############
 	s = status
+	st = status
 	sb = status -s -b
 	#############
 	sa = stash apply
@@ -197,7 +198,6 @@
 	ss = stash save
 	ssk = stash save -k
 	sw = stash show
-	st = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
 	#############
 	t = tag
 	td = tag -d
